@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthLoginRequest } from 'src/app/interfaces/AuthLoginRequest.interface';
 import { UserService } from 'src/app/services/user.service';
@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginPageComponent {
   constructor(private userService: UserService, private router: Router) {}
+
   mail: string = '';
   password: string = '';
   errorMessages: string[] = [];

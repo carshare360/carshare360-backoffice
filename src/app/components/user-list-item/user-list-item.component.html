@@ -1,0 +1,43 @@
+<div class="user-container">
+  <div class="user-info" (click)="toggleExpansion()">
+    <div>
+      <p>{{ user.id }}</p>
+    </div>
+    <div style="gap: 20px">
+      <p>
+        {{ user.firstName }}
+      </p>
+      <p>
+        {{ user.lastName }}
+      </p>
+    </div>
+  </div>
+  <div class="expandible-container" [ngClass]="isExpanded ? '' : 'hidden'">
+    <div>
+      <p>Email:</p>
+      <p>{{ user.email }}</p>
+    </div>
+    <div>
+      <p>Phone:</p>
+      <p>{{ user.phoneNumber ? user.phoneNumber : "--" }}</p>
+    </div>
+    <div class="blacklist-container" *ngIf="!user.blacklisted">
+      <img
+        *ngIf="blackListConfirm == 0"
+        src="../../../assets/imgs/blacklist-icon.png"
+        (click)="toggleBlacklistConfirm(1)"
+      />
+      <p *ngIf="blackListConfirm != 0">Confirm</p>
+      <img
+        *ngIf="blackListConfirm != 0"
+        src="../../../assets/imgs/check-icon.png"
+        (click)="toggleBlacklistConfirm(2)"
+      />
+      <img
+        *ngIf="blackListConfirm != 0"
+        src="../../../assets/imgs/cancel-icon.png"
+        (click)="toggleBlacklistConfirm(0)"
+      />
+    </div>
+  </div>
+</div>

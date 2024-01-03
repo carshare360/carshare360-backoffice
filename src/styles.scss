@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~leaflet/dist/leaflet.css";
 @font-face {
   font-family: "Lexend";
   src: url("./assets/fonts/Lexend-Regular.ttf") format("ttf"),
@@ -25,4 +26,12 @@ body {
   --secondary-color: #f5cb5c;
   --secondary-dark: #333533;
   --secondary-light: #cfdbd5;
+}
+app-root {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+app-panel-page {
+  width: 100%;
 }

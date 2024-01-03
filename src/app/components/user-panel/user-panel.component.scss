@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 15px;
+  div {
+    display: flex;
+  }
+}
+.show-button {
+  background-color: var(--secondary-dark);
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+  p {
+    color: var(--primary-light);
+  }
+}
+.show-button:hover {
+  background-color: var(--primary-dark);
+  cursor: pointer;
+}
+app-user-list-item {
+  display: flex;
+}

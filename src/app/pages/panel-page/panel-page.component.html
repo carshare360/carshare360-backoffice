@@ -4,7 +4,9 @@
       <div class="side-navbar-profile-picture">
         <img id="user-icon" src="../../../assets/imgs/user-icon.webp" />
       </div>
-      <div class="side-navbar-profile-name"><p>Admin Admin</p></div>
+      <div class="side-navbar-profile-name">
+        <p>Admin Admin</p>
+      </div>
     </div>
     <div
       *ngFor="let navbarItem of navbarItems; index as i"
@@ -45,6 +47,12 @@
           {{ card.name }}
         </p>
       </div>
+    </div>
+    <div *ngIf="panelMode == 2" class="panel-dashboard">
+      <app-user-panel> </app-user-panel>
+    </div>
+    <div *ngIf="panelMode == 3" class="panel-dashboard">
+      <app-vehicle-panel></app-vehicle-panel>
     </div>
   </div>
 </div>

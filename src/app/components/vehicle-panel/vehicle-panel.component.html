@@ -1,0 +1,52 @@
+<div class="container">
+  <div
+    *ngFor="let vehicle of paginatedVehicles; index as i"
+    class="vehicles-container"
+  >
+    <div class="vehicle-info" (click)="toggleExpansion(i)">
+      <div class="p-wrapper">
+        <p>Id: {{ vehicle.id }}</p>
+        <p>{{ vehicle.brand }}</p>
+        <p>{{ vehicle.model }}</p>
+      </div>
+      <div style="flex: 4; align-items: center">
+        <p>{{ vehicle.title }}</p>
+      </div>
+    </div>
+    <div class="expandible-container" *ngIf="getExpansionInfo(i)">
+      <div style="flex: 1; justify-content: flex-start; align-items: center">
+        <p>{{ vehicle.description }}</p>
+      </div>
+      <div
+        style="
+          flex: 1;
+          flex-direction: column;
+          gap: 10px;
+          justify-content: center;
+        "
+      >
+        <p>Availability: {{ vehicle.isAvailable }}</p>
+        <p>Price Per Hour: {{ vehicle.pricePerHour }}TL/hr</p>
+        <p>Engine Type: {{ vehicle.engineType }}</p>
+        <p>Transmission Type: {{ vehicle.transmissionType }}</p>
+
+        <p>Year: {{ vehicle.year }}</p>
+        <p>Milage: {{ vehicle.mileage }}</p>
+      </div>
+
+      <app-vehicle-map [vehicle]="vehicle"></app-vehicle-map>
+    </div>
+  </div>
+
+  <div *ngIf="allVehicles.length > itemsPerPage">
+    <div class="pagination">
+      <div
+        *ngFor="let page of getPages()"
+        (click)="onPageChange(page)"
+        [class.active]="currentPage === page"
+      >
+        <p>{{ page }}</p>
+      </div>
+    </div>
+  </div>
+</div>
