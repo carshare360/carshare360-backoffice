@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "Lexend";
+  src: url("./assets/fonts/Lexend-Regular.ttf") format("ttf"),
+    url("./assets/fonts/Lexend-Bold.ttf") format("ttf");
+  /* Add more src lines for different font file formats */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lexend", sans-serif;
+}
+:root {
+  /* Primary Colors */
+  --primary-color: #f5cb5c;
+  --primary-dark: #242423;
+  --primary-light: #e8eddf;
+
+  /* Secondary Colors */
+  --secondary-color: #f5cb5c;
+  --secondary-dark: #333533;
+  --secondary-light: #cfdbd5;
+}

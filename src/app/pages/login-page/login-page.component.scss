@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-light);
+  div {
+    display: flex;
+  }
+}
+.login-container {
+  width: 350px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.inputs {
+  flex-direction: column;
+  gap: 20px;
+}
+.text-input-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  justify-content: center;
+  align-items: center;
+  p {
+    width: fit-content;
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+input {
+  width: 900%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+.submit-button {
+  background-color: var(--primary-dark);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(
+    --secondary-dark
+  ); /* Darker color on hover, adjust as needed */
+}
+.errors {
+  flex-direction: column;
+  p {
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+}

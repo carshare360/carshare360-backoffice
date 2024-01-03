@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-light);
+  div {
+    display: flex;
+  }
+}
+.side-navbar {
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--secondary-dark);
+
+  p {
+    color: var(--primary-light);
+  }
+}
+.side-navbar-item {
+  padding: 10px 10px 5px 30px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.side-navbar-item:hover {
+  background-color: var(--primary-dark);
+}
+.side-navbar-profile {
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.side-navbar-profile-picture {
+  flex: 1;
+}
+.side-navbar-profile-name {
+  flex: 3;
+  justify-content: center;
+}
+.panel-container {
+  flex: 5;
+  padding: 40px;
+}
+.panel-dashboard {
+  width: 100%;
+  gap: 30px;
+}
+.dashboard-card {
+  background-color: var(--secondary-light);
+  width: 300px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+  p {
+    font-size: large;
+    font-weight: bolder;
+  }
+}
+.dashboard-card:hover {
+  background-color: var(--secondary-dark);
+  p {
+    color: var(--primary-light);
+  }
+}
+.reverse-color-effect {
+  transition: filter 0.3s ease;
+}
+
+.dashboard-card:hover .reverse-color-effect {
+  filter: invert(90%);
+}
+#user-icon {
+  width: 80px;
+}

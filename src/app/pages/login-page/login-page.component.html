@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="login-container">
+    <div class="header"><p>Login</p></div>
+    <div class="inputs">
+      <div class="text-input-wrapper">
+        <input type="text" [(ngModel)]="mail" placeholder="email.." />
+      </div>
+      <div class="text-input-wrapper">
+        <input
+          type="password"
+          [(ngModel)]="password"
+          placeholder="password.."
+        />
+      </div>
+      <button class="submit-button" (click)="submitForm()">Submit</button>
+      <div class="errors">
+        <p *ngFor="let errorMessage of errorMessages">{{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="side-navbar">
+    <div class="side-navbar-profile">
+      <div class="side-navbar-profile-picture">
+        <img id="user-icon" src="../../../assets/imgs/user-icon.webp" />
+      </div>
+      <div class="side-navbar-profile-name"><p>Admin Admin</p></div>
+    </div>
+    <div
+      *ngFor="let navbarItem of navbarItems; index as i"
+      class="side-navbar-item"
+      (click)="changePanelMode(i)"
+    >
+      <p>{{ navbarItem.name }}</p>
+    </div>
+  </div>
+  <div class="panel-container">
+    <div *ngIf="panelMode == 1" class="panel-dashboard">
+      <div
+        *ngFor="let card of panelDashboardCards; index as i"
+        class="dashboard-card"
+        (mouseover)="addReverseColorEffect()"
+        (mouseout)="removeReverseColorEffect()"
+        (click)="changePanelMode(i)"
+      >
+        <img [src]="card.url" class="reverse-color-effect" />
+        <p>
+          {{ card.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
