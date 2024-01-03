@@ -13,6 +13,23 @@
     >
       <p>{{ navbarItem.name }}</p>
     </div>
+    <div class="logout-container">
+      <div
+        class="logout"
+        (click)="setLogoutOptionsOn(true)"
+        *ngIf="!isLogoutOptionsOn"
+      >
+        <p>Logout</p>
+      </div>
+      <div class="logout" *ngIf="isLogoutOptionsOn">
+        <div class="logout-icon-wrapper" (click)="logout()">
+          <img class="logout-icon" src="../../../assets/imgs/check-icon.png" />
+        </div>
+        <div class="logout-icon-wrapper" (click)="setLogoutOptionsOn(false)">
+          <img class="logout-icon" src="../../../assets/imgs/cancel-icon.png" />
+        </div>
+      </div>
+    </div>
   </div>
   <div class="panel-container">
     <div *ngIf="panelMode == 1" class="panel-dashboard">

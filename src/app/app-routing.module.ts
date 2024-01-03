@@ -5,7 +5,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
   { path: 'panel', component: PanelPageComponent },
-  { path: '', component: LoginPageComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginPageComponent },
 ];
 
