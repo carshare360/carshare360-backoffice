@@ -12,6 +12,9 @@ import { Vehicle } from '../interfaces/Vehicle';
 })
 export class UserService {
   private apiUrl = 'http://54.91.169.225:3000/api/v1/';
+  // private apiUrlRaw = 'http://54.91.169.225:3000/api/v1/';
+  // private proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  // private apiUrl = this.proxyUrl + this.apiUrlRaw;
   private isAuthorized: boolean = false;
   private authTokenKey = 'adminAuthToken';
   private adminToken = '';
