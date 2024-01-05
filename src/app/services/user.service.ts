@@ -11,7 +11,7 @@ import { Vehicle } from '../interfaces/Vehicle';
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/api/v1/';
+  private apiUrl = 'http://3.94.18.91:3000/api/v1/';
   private isAuthorized: boolean = false;
   private authTokenKey = 'adminAuthToken';
   private adminToken = '';
